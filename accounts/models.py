@@ -92,3 +92,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     REQUIRED_FIELDS = ['email']
     def __str__(self):
         return self.account_id
+
+class Create_pass(models.Model):
+    createdPassword = models.CharField

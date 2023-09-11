@@ -8,13 +8,18 @@
 {% endif %}
 {% endblock %}
 
+
+
 {% block content %}
 {% if user.is_authenticated %}
 <div class="h2">Welcome {{ user.first_name }} {{ user.last_name }}</div>
 
-<a href="{% url 'accounts:logout' %}" class="btn btn-primary">Logout</a> 
-<h1></h1>
+<a href="{% url 'accounts:logout' %}" class="btn btn-primary">Logout</a>
+<div>passco-{{ pass_result }}</div>
 {% else %}
 <a href="{% url 'accounts:signup' %}" class="btn btn-primary">Signup</a>
 {% endif %}
+{% endblock %}
+
+{% block main %}
 {% endblock %}

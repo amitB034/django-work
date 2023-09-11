@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<div class="h2">hello </div>
+
+<br/>
+<br/>
+<br/>
+<div class="h4">パスワードの条件を指定して下さい</div>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="checkbox" value="s_alph" name="wordtype">英語（小文字）
+    <br/>
+    <input type="checkbox" value="c_alph" name="wordtype">英語(大文字)
+    <br/>
+    <input type="checkbox" value="num" checked name="wordtype">数字
+    <br/>
+    <p>
+        <label>
+            文字数を指定してください：<input type="number"  value="4" class="btn btn-primary" min="1" max ="50"name="number"/>
+        </label>
+    </p>
+    
+    <br/>
+    <br/>
+    <button type="submit" class="btn btn-primary">パスワード作成</button>
+</form>
+
+<div class="h3">{{ pass_result }}</div>
+
+
+<br/>
+<br/>
+<br/>
+<a href="{% url 'accounts:logout' %}" class="btn btn-primary">Logout</a>
+{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
