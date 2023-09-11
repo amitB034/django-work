@@ -41,8 +41,10 @@ def view_pass(request):
         context = {
             "pass_result" : pass_result
         }
-    print(checkbox,number)
-    print(pass_result)
+    else:
+        context = {
+            "pass_result" : "ここにパスワードが出力されます"
+        }
     #print(s_alph,c_alph,pass_num,number)
     return render(request,'main.html',context)
 
