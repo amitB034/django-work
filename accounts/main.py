@@ -30,11 +30,6 @@ def create_pass(checkbox,number):
     randompass = make_random(numberForRandom,checkbox)
     
     print(checkbox)
-    #num = int(input())
     
-    
-    #for i in range(4):
-
-
     pass_code = randompass
     return pass_code
