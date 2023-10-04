@@ -27,9 +27,8 @@ def make_random(numberForRandom,checkbox):
 def create_pass(checkbox,number):
 
     numberForRandom = int(number)
-    randompass = make_random(numberForRandom,checkbox)
     
     print(checkbox)
     
-    pass_code = randompass
+    pass_code = make_random(numberForRandom,checkbox)
     return pass_code
